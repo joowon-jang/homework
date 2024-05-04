@@ -1,0 +1,65 @@
+:root {
+  --avatar-image-width: 64px;
+  --avatar-image-height: 64px;
+
+  --avatar-status-width: 16px;
+  --avatar-status-hegith: 16px;
+}
+
+.main {
+  width: 336px;
+}
+
+.avatar-container {
+  display: flow-root;
+}
+
+.avatar-wrapper {
+  position: relative;
+  width: var(--avatar-image-width);
+  height: var(--avatar-image-height);
+  float: left;
+  margin: 10px;
+}
+
+.avatar-image {
+  width: var(--avatar-image-width);
+  height: var(--avatar-image-height);
+  border-radius: 50%;
+}
+
+.avatar-status {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: var(--avatar-status-width);
+  height: var(--avatar-status-hegith);
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.status-on {
+  background-color: #4cfe88;
+}
+.status-off {
+  background-color: #dbdbdb;
+}
+
+.status-span {
+  display: none;
+}
+
+@supports (display: flex) {
+  .main {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 336px;
+  }
+  .avatar-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+  .avatar-container:first-child {
+    order: 1;
+  }
+}
