@@ -45,11 +45,7 @@
 @supports (display: flex) {
   .main {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row wrap-reverse;
     justify-content: space-between;
-  }
-
-  .avatar-wrapper:nth-child(-n + 4) {
-    order: 1;
   }
 }

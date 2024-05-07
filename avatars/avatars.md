@@ -36,7 +36,7 @@
 
   1. **CSS의 order 속성**을 지정해서 구현할 수 있음.
   2. avatar-wrapper div를 4개씩 묶어서 div(class="avatar-container")에 넣어줌.
-     - 피드백 후 -> container를 없애고 8개의 avatar-wrapper div로, main 컨테이너의 CSS 속성을 flex-wrap: wrap으로 변경.
+     - 피드백 후 -> container를 없애고 8개의 avatar-wrapper div로, main 컨테이너의 CSS 속성을 flex-wrap: wrap-reverse로 변경.
 
 ### 접근성 측면
 - avatar의 **상태 정보를 전달**하기 위해 aria-label을 사용할 수 있음.
@@ -70,6 +70,6 @@ _과제에는 없었지만, avatar의 상태를 update하면서 **aria-labelledb
 ### 상태 및 aria-label을 Toggle
 1. querySelectorAll 속성을 사용해 **avatar-status 클래스를 가진 div들**을 선택.
 2. 선택한 요소들에 **forEach** 속성을 사용해 각각을 선택 후 addEventListener 속성을 사용해 **click event 추가**.
-3. 선택한 요소 내에서 **status-span class를 가진 요소**를 탐색.
-4. if/else 문에서 status-on/off class를 바꿔줌 + statusSpan의 textContent를 on/off로 바꿔줌.
-5. 상태와 aria-labelledby 값까지 **Toggle**됨.
+3. 선택한 요소 내에서 **status-span class를 가진 요소**를 탐색. (aria-labelledby의 경우)
+4. if/else 문에서 status-on/off class를 바꿔줌 + statusSpan의 textContent를 on/off로 바꿔줌. (aria-label의 경우 setAttribute("aria-label","on/off"))
+5. 상태와 aria-label **Toggle**됨.
