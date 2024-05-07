@@ -41,6 +41,9 @@
 ### 접근성 측면
 - avatar의 **상태 정보를 전달**하기 위해 aria-label을 사용할 수 있음.
   1. 상태가 **on/off로 변한다면** aria-labelledby를 사용해서 해결할 수 있다고 생각함.
+      - 과제 후 추가로 알아본 내용
+        1. aria-labelledby -> textContent 속성을 사용.
+        2. aria-label을 써도 JavaScript의 setAttribute 속성으로 변경할 수 있기 때문에 이 방법이 더 좋아보임.
   2. aria-labelledby 속성은 **id 속성 값을 통해 연결**되기 때문에 상태 표시 div 안에 span 태그(class="status-span")를 사용해 on/off를 작성해줌. **(+ CSS 속성 display: none)**
       - 피드백 후 -> CSS 속성을 **visibility: hidden**으로 바꿈.
 
