@@ -1,10 +1,26 @@
 # 과제1 - Avatars
 
-- float를 사용하여 다음의 레이아웃을 구현해 본다.
-<img src="https://file.notion.so/f/f/2c9b0f24-8e73-4514-b0c2-312f3d7d31f4/14c86214-1c78-448e-a2bd-0f6349fbf42e/Avatars_(1).png?id=add23401-8c8c-4835-ad66-4013ee8a8db8&table=block&spaceId=2c9b0f24-8e73-4514-b0c2-312f3d7d31f4&expirationTimestamp=1714910400000&signature=m8ATuGAZMlKPfcrMQg9B700qr1yRY3hfzZaJJlqqCpo&downloadName=Avatars+%281%29.png" />
+### 다음 조건을 만족할 수 있도록 마크업과 스타일링을 완성하자.
+- 아바타 이미지는 배경 방식이 아닌 콘텐츠 이미지(<img> 요소)로 마크업한다.
 
-- flex를 지원하는 환경에서는 다음과 같이 배치되도록 레이아웃을 구현해 본다.
-<img src="https://file.notion.so/f/f/2c9b0f24-8e73-4514-b0c2-312f3d7d31f4/3077693f-ab5b-461c-add9-7db83c36d3bf/Avatars_(2).png?id=45b99218-3c58-46cd-83a8-391bdfdb67fc&table=block&spaceId=2c9b0f24-8e73-4514-b0c2-312f3d7d31f4&expirationTimestamp=1714910400000&signature=qWAWj59WCya22fmZSz9Jb5ZovMEOjEFD2OWJolWY340&downloadName=Avatars+%282%29.png">
+- 아바타의 상태 정보를 알 수 있도록 정보를 제공한다.
+
+- 아바타 이미지의 크기 - 64px X 64px
+
+- 아바타 이미지 간의 간격 - 20px
+
+- 회색 원 배경색 - #DBDBDB
+
+- 초록색 원 배경색- #4CFE88
+
+<br />
+
+#### float를 사용하여 다음의 레이아웃을 구현해 본다.
+
+<img src="./img/Avatars (1).png" />
+
+#### flex를 지원하는 환경에서는 다음과 같이 배치되도록 레이아웃을 구현해 본다.
+<img src="./img/Avatars (2).png">
 
 <br />
 
