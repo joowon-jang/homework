@@ -3,17 +3,23 @@
   --avatar-status-size: 16px;
 }
 
-.main {
+.main-section {
   width: 336px;
-  display: flow-root;
+
+  .avatars-list {
+    list-style-type: none;
+    display: flow-root;
+  }
+  .avatar-item {
+    float: left;
+  }
 }
 
 .avatar-wrapper {
-  position: relative;
+  margin: 10px;
   width: var(--avatar-image-size);
   height: var(--avatar-image-size);
-  float: left;
-  margin: 10px;
+  position: relative;
 }
 
 .avatar-image {
@@ -43,9 +49,14 @@
 }
 
 @supports (display: flex) {
-  .main {
-    display: flex;
-    flex-flow: row wrap-reverse;
-    justify-content: space-between;
+  .main-section {
+    .avatars-list {
+      display: flex;
+      flex-flow: row wrap-reverse;
+      justify-content: space-between;
+    }
+    .avatar-item {
+      float: none;
+    }
   }
 }

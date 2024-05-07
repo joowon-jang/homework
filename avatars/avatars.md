@@ -38,6 +38,8 @@
   2. avatar-wrapper div를 4개씩 묶어서 div(class="avatar-container")에 넣어줌.
      - 피드백 후 -> container를 없애고 8개의 avatar-wrapper div로, main 컨테이너의 CSS 속성을 flex-wrap: wrap-reverse로 변경.
 
+> 사용자 목록을 나타내므로 ul, li를 사용하도록 변경함.
+
 ### 접근성 측면
 - avatar의 **상태 정보를 전달**하기 위해 aria-label을 사용할 수 있음.
   1. 상태가 **on/off로 변한다면** aria-labelledby를 사용해서 해결할 수 있다고 생각함.
@@ -46,6 +48,9 @@
         2. aria-label을 써도 JavaScript의 setAttribute 속성으로 변경할 수 있기 때문에 이 방법이 더 좋아보임.
   2. aria-labelledby 속성은 **id 속성 값을 통해 연결**되기 때문에 상태 표시 div 안에 span 태그(class="status-span")를 사용해 on/off를 작성해줌. **(+ CSS 속성 display: none)**
       - 피드백 후 -> CSS 속성을 **visibility: hidden**으로 바꿈.
+      - 1번의 이유로 aria-labelledby 사용하지 않음.
+
+> div보다는 의미를 조금 더 나타낼 수 있는 semantic tag로 변경함. (둘 중에 뭐가 더 좋다고 할 수는 없음.)
 
 <br />
 
