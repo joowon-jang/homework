@@ -6,6 +6,8 @@
 - flex를 지원하는 환경에서는 다음과 같이 배치되도록 레이아웃을 구현해 본다.
 <img src="https://file.notion.so/f/f/2c9b0f24-8e73-4514-b0c2-312f3d7d31f4/3077693f-ab5b-461c-add9-7db83c36d3bf/Avatars_(2).png?id=45b99218-3c58-46cd-83a8-391bdfdb67fc&table=block&spaceId=2c9b0f24-8e73-4514-b0c2-312f3d7d31f4&expirationTimestamp=1714910400000&signature=qWAWj59WCya22fmZSz9Jb5ZovMEOjEFD2OWJolWY340&downloadName=Avatars+%282%29.png">
 
+<br />
+
 ## HTML 마크업
 
 ### 구조 설계
@@ -23,6 +25,9 @@
 - avatar의 **상태 정보를 전달**하기 위해 aria-label을 사용할 수 있음.
   1. 상태가 **on/off로 변한다면** aria-labelledby를 사용해서 해결할 수 있다고 생각함.
   2. aria-labelledby 속성은 **id 속성 값을 통해 연결**되기 때문에 상태 표시 div 안에 span 태그(class="status-span")를 사용해 on/off를 작성해줌. **(+ CSS 속성 display: none)**
+  - 피드백 후 -> CSS 속성을 **visibility: hidden**으로 바꿈.
+
+<br />
 
 ## CSS
 
@@ -30,8 +35,13 @@
 - 정확한 레이아웃 구현을 위해 normalize.css 및 reset.css로 user agent style을 초기화.
 
 ### 컴포넌트화
-1. 각각의 avatar 이미지 및 상태표시 div의 크기를 한번에 관리하기 위해 :root에 이미지와 상태 표시 div의 **width, height를 변수로 만듬**.
-2. avatar 이미지와 상태 표시 div의 width와 height를 변수로 만들었기 때문에, **값을 변경하는 상황을 염두**에 두고 border-radius 값은 px단위가 아닌 **50%로** 지정함.
+
+- 각각의 avatar 이미지 및 상태표시 div의 크기를 한번에 관리하기 위해 :root에 이미지와 상태 표시 div의 **width, height를 변수로 만듬**.
+  - 피드백 후 -> width, height가 같은 값이기 때문에 size라는 하나의 변수로 관리.
+
+- avatar 이미지와 상태 표시 div의 width와 height를 변수로 만들었기 때문에, **값을 변경하는 상황을 염두**에 두고 border-radius 값은 px단위가 아닌 **50%로** 지정함.
+
+<br />
 
 ## JavaScript
 

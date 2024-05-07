@@ -1,9 +1,6 @@
 :root {
-  --avatar-image-width: 64px;
-  --avatar-image-height: 64px;
-
-  --avatar-status-width: 16px;
-  --avatar-status-hegith: 16px;
+  --avatar-image-size: 64px;
+  --avatar-status-size: 16px;
 }
 
 .main {
@@ -16,15 +13,15 @@
 
 .avatar-wrapper {
   position: relative;
-  width: var(--avatar-image-width);
-  height: var(--avatar-image-height);
+  width: var(--avatar-image-size);
+  height: var(--avatar-image-size);
   float: left;
   margin: 10px;
 }
 
 .avatar-image {
-  width: var(--avatar-image-width);
-  height: var(--avatar-image-height);
+  width: var(--avatar-image-size);
+  height: var(--avatar-image-size);
   border-radius: 50%;
 }
 
@@ -32,8 +29,8 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  width: var(--avatar-status-width);
-  height: var(--avatar-status-hegith);
+  width: var(--avatar-status-size);
+  height: var(--avatar-status-size);
   border-radius: 50%;
   border: 1px solid white;
 }
@@ -45,7 +42,7 @@
 }
 
 .status-span {
-  display: none;
+  visibility: hidden;
 }
 
 @supports (display: flex) {
