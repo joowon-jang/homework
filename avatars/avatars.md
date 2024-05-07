@@ -20,6 +20,7 @@
 
   1. **CSS의 order 속성**을 지정해서 구현할 수 있음.
   2. avatar-wrapper div를 4개씩 묶어서 div(class="avatar-container")에 넣어줌.
+     - 피드백 후 -> container를 없애고 8개의 avatar-wrapper div로, main 컨테이너의 CSS 속성을 flex-wrap: wrap으로 변경.
 
 ### 접근성 측면
 - avatar의 **상태 정보를 전달**하기 위해 aria-label을 사용할 수 있음.

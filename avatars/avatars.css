@@ -5,9 +5,6 @@
 
 .main {
   width: 336px;
-}
-
-.avatar-container {
   display: flow-root;
 }
 
@@ -48,15 +45,11 @@
 @supports (display: flex) {
   .main {
     display: flex;
-    flex-flow: column nowrap;
-    width: 336px;
-  }
-  .avatar-container {
-    display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
   }
-  .avatar-container:first-child {
+
+  .avatar-wrapper:nth-child(-n + 4) {
     order: 1;
   }
 }
