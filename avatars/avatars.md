@@ -47,10 +47,14 @@
         1. aria-labelledby -> textContent 속성을 사용.
         2. aria-label을 써도 JavaScript의 setAttribute 속성으로 변경할 수 있기 때문에 이 방법이 더 좋아보임.
   2. aria-labelledby 속성은 **id 속성 값을 통해 연결**되기 때문에 상태 표시 div 안에 span 태그(class="status-span")를 사용해 on/off를 작성해줌. **(+ CSS 속성 display: none)**
-      - 피드백 후 -> CSS 속성을 **visibility: hidden**으로 바꿈.
+      - 피드백 후 -> CSS 속성을 **visibility: hidden**으로 바꿨지만 이것도 스크린리더에 읽히지 않는다고 함...
       - 1번의 이유로 aria-labelledby 사용하지 않음.
 
 > div보다는 의미를 조금 더 나타낼 수 있는 semantic tag로 변경함. (둘 중에 뭐가 더 좋다고 할 수는 없음.)
+
+> display: none, visibility: hidden 모두 스크린리더가 읽지않기 때문에 aria-labelledby를 사용해서 구현하기 위해 text를 감추기 위한 많은 방법을 알아봤지만 문제가 너무 많았고, 아래의 블로그에서 정보를 얻을 수 있었다.
+<br />
+[참고한 숨김텍스트 블로그]("https://mulder21c.io/screen-hide-text/")
 
 <br />
 
@@ -70,7 +74,7 @@
 
 ## JavaScript
 
-_과제에는 없었지만, avatar의 상태를 update하면서 **aria-labelledby로 전달한 상태 정보까지 어떻게 변경할 수 있을지** 확인해보고 싶었기 때문에 사전학습 지식과 검색을 통해 만들어 봤습니다._
+_과제에는 없었지만, avatar의 상태를 update하면서 **aria-label로 전달한 상태 정보까지 어떻게 변경할 수 있을지** 확인해보고 싶었기 때문에 사전학습 지식과 검색을 통해 만들어 봤습니다._
 
 ### 상태 및 aria-label을 Toggle
 1. querySelectorAll 속성을 사용해 **avatar-status 클래스를 가진 div들**을 선택.
