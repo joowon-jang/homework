@@ -30,6 +30,7 @@
 
   button {
     --button-height: 2.8125rem;
+
     font-size: 1rem;
     height: var(--button-height);
     block-size: var(--button-height);
