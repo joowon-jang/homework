@@ -78,7 +78,7 @@
 }
 
 /* 로그인 버튼 아래 옵션 그룹 */
-.login-setting-group {
+.login-option-group {
   order: 1;
   margin-top: 0.625rem;
   display: flex;
@@ -135,7 +135,7 @@
 }
 
 /* IP보안 체크박스 */
-.security-checkbox {
+.ip-security-checkbox {
   input::after {
     width: fit-content;
     content: "OFF";
@@ -163,7 +163,7 @@
     width: 500px;
   }
 
-  .login-setting-group {
+  .login-option-group {
     justify-content: space-between;
   }
 }
