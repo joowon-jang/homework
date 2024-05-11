@@ -1,6 +1,6 @@
 @import url(/naver/base.css);
 
-.security-checkbox {
+.form-checkbox {
   --label-height: 1.5rem;
 
   position: relative;

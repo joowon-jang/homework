@@ -80,35 +80,26 @@
   justify-content: flex-end;
 }
 
-.keep-login-checkbox {
-  --checkbox-width: 1.5rem;
-  --checkbox-height: 1.5rem;
+.form-checkbox {
   --label-height: 1.5rem;
 
   position: relative;
   display: flex;
 
   input {
-    position: absolute;
     appearance: none;
-    width: var(--checkbox-width);
-    height: var(--checkbox-height);
   }
   input:hover {
     cursor: pointer;
   }
 
   label {
-    background: url(/naver/icons/unchecked.svg) no-repeat 0 0 / contain;
-    padding-left: calc(var(--checkbox-width) + 0.3125rem);
     display: block;
     height: var(--label-height);
     block-size: var(--label-height);
     line-height: var(--label-height);
   }
-  input:checked + label {
-    background: url(/naver/icons/checked.svg) no-repeat 0 0 / contain;
-  }
+
   input:focus {
     outline: none;
   }
@@ -117,25 +108,26 @@
   }
 }
 
-.security-checkbox {
-  --label-height: 1.5rem;
-
-  position: relative;
-  display: flex;
+.keep-login-checkbox {
+  --checkbox-width: 1.5rem;
+  --checkbox-height: 1.5rem;
 
   input {
-    appearance: none;
-  }
-  input:hover {
-    cursor: pointer;
+    position: absolute;
+    width: var(--checkbox-width);
+    height: var(--checkbox-height);
   }
 
   label {
-    display: block;
-    height: var(--label-height);
-    block-size: var(--label-height);
-    line-height: var(--label-height);
+    background: url(/naver/icons/unchecked.svg) no-repeat 0 0 / contain;
+    padding-left: calc(var(--checkbox-width) + 0.3125rem);
   }
+  input:checked + label {
+    background: url(/naver/icons/checked.svg) no-repeat 0 0 / contain;
+  }
+}
+
+.security-checkbox {
   input::after {
     width: fit-content;
     content: "OFF";
@@ -147,12 +139,6 @@
       content: "ON";
       color: #03cf5d;
     }
-  }
-  input:focus {
-    outline: none;
-  }
-  input:focus-visible {
-    outline: 2px solid #24388d;
   }
 }
 
