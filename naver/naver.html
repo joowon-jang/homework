@@ -8,18 +8,22 @@
   </head>
   <body>
     <h1 class="sr-only">네이버 로그인</h1>
+
     <section class="login-section">
+      <!-- 네이버 로고 -->
       <a href="/" aria-label="홈으로 이동">
         <picture>
           <source srcset="./logo.svg" width="230px" />
           <img src="./logo.png" alt="네이버 로고" width="230px" />
         </picture>
       </a>
+
+      <!-- 로그인 폼 -->
       <form action="/" class="login-form">
         <fieldset>
           <legend class="sr-only">로그인 폼</legend>
 
-          <!-- Email/Pwd -->
+          <!-- Email/Pwd 입력-->
           <div class="login-input-group">
             <!-- Email input -->
             <div role="group" class="form-input">
@@ -43,7 +47,7 @@
             </div>
           </div>
 
-          <!-- login keep -->
+          <!-- 로그인 옵션 설정 -->
           <div class="login-setting-group">
             <div role="group" class="form-checkbox keep-login-checkbox">
               <input type="checkbox" id="keepLogin" name="keepLogin" />
@@ -57,7 +61,7 @@
             </div>
           </div>
 
-          <!-- button -->
+          <!-- 로그인 버튼 -->
           <button type="submit">로그인</button>
         </fieldset>
       </form>
