@@ -3,54 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./naver.css" />
+    <link rel="stylesheet" href="/naver/naver.css" />
     <title>네이버 로그인</title>
   </head>
   <body>
     <h1 class="sr-only">네이버 로그인</h1>
-    <a href="/">
-      <picture>
-        <source srcset="./logo.svg" />
-        <img src="./logo.png" alt="네이버 로고" />
-      </picture>
-    </a>
-    <form action="/" class="login-form">
-      <fieldset>
-        <legend class="sr-only">로그인 폼</legend>
+    <section class="login-section">
+      <a href="/" aria-label="홈으로 이동">
+        <picture>
+          <source srcset="./logo.svg" width="230px" />
+          <img src="./logo.png" alt="네이버 로고" width="230px" />
+        </picture>
+      </a>
+      <form action="/" class="login-form">
+        <fieldset>
+          <legend class="sr-only">로그인 폼</legend>
 
-        <!-- Email/Pwd -->
-        <div class="login-input-group">
-          <!-- Email input -->
-          <div role="group" class="login-input">
-            <label for="userEmail" class="sr-only">아이디</label>
-            <input
-              type="email"
-              id="userEmail"
-              required
-              placeholder="아이디(이메일)"
-            />
+          <!-- Email/Pwd -->
+          <div class="login-input-group">
+            <!-- Email input -->
+            <div role="group" class="form-input">
+              <label for="userEmail" class="sr-only">아이디</label>
+              <input
+                type="email"
+                id="userEmail"
+                required
+                placeholder="아이디(이메일)"
+              />
+            </div>
+            <!-- Pwd input -->
+            <div role="group" class="form-input">
+              <label for="userPwd" class="sr-only">비밀번호</label>
+              <input
+                type="password"
+                id="userPwd"
+                required
+                placeholder="비밀번호"
+              />
+            </div>
           </div>
-          <!-- Pwd input -->
-          <div role="group" class="login-input">
-            <label for="userPwd" class="sr-only">비밀번호</label>
-            <input
-              type="password"
-              id="userPwd"
-              required
-              placeholder="비밀번호"
-            />
+
+          <!-- login keep -->
+          <div class="login-setting-group">
+            <div role="group" class="keep-login-checkbox">
+              <input type="checkbox" id="keepLogin" name="keepLogin" />
+              <label for="keepLogin">로그인 상태 유지</label>
+            </div>
+            <div role="group" class="security-checkbox">
+              <label for="ipSecurity">
+                <a href="/naver/ip_security.html">IP 보안</a>
+              </label>
+              <input type="checkbox" id="ipSecurity" name="ipSecurity" />
+            </div>
           </div>
-        </div>
 
-        <!-- login keep -->
-        <div role="group" class="login-keep-group">
-          <input type="checkbox" id="keepLogin" name="keepLogin" />
-          <label for="keepLogin">로그인 상태 유지</label>
-        </div>
-
-        <!-- button -->
-        <button type="submit">로그인</button>
-      </fieldset>
-    </form>
+          <!-- button -->
+          <button type="submit">로그인</button>
+        </fieldset>
+      </form>
+    </section>
   </body>
 </html>

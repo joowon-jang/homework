@@ -1,1 +1,173 @@
-@import url(./base.css);
+@import url(/naver/base.css);
+
+*:focus {
+  outline: 0.125rem solid #24388d;
+}
+
+.login-section {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+
+  a {
+    margin: 4rem 0;
+  }
+}
+
+.login-form {
+  width: 100%;
+
+  fieldset {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  button {
+    font-size: 1rem;
+    height: 2.8125rem;
+    block-size: 2.8125rem;
+    line-height: 2.8125rem;
+    color: #fff;
+    background: #03cf5d;
+    margin-top: 1.25rem;
+    border: none;
+  }
+}
+
+.login-input-group {
+  --input-gap: 0.625rem;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--input-gap);
+
+  .form-input {
+    --font-size: 0.875rem;
+    --input-height: 2.8125rem;
+    --border-color: #dadada;
+    --border-color-focused: #03cf5d;
+    --bg-color: #fff;
+    --bg-color-focused: #e9f0fd;
+
+    display: flex;
+    flex-flow: row wrap;
+
+    input {
+      flex-grow: 1;
+      font-size: var(--font-size);
+      height: var(--input-height);
+      block-size: var(--input-height);
+      line-height: var(--input-height);
+      padding: 0 0.875rem;
+
+      border: 1px solid var(--border-color);
+      background: var(--bg-color);
+    }
+    input:focus {
+      border-color: var(--border-color-focused);
+      background: var(--bg-color-focused);
+      outline: none;
+    }
+  }
+}
+
+.login-setting-group {
+  order: 1;
+  margin-top: 0.625rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.keep-login-checkbox {
+  --checkbox-width: 1.5rem;
+  --checkbox-height: 1.5rem;
+  --label-height: 1.5rem;
+
+  position: relative;
+  display: flex;
+
+  input {
+    position: absolute;
+    appearance: none;
+    width: var(--checkbox-width);
+    height: var(--checkbox-height);
+  }
+  input:hover {
+    cursor: pointer;
+  }
+
+  label {
+    background: url(/naver/icons/unchecked.svg) no-repeat 0 0 / contain;
+    padding-left: calc(var(--checkbox-width) + 0.3125rem);
+    display: block;
+    height: var(--label-height);
+    block-size: var(--label-height);
+    line-height: var(--label-height);
+  }
+  input:checked + label {
+    background: url(/naver/icons/checked.svg) no-repeat 0 0 / contain;
+  }
+  input:focus {
+    outline: none;
+  }
+  input:focus-visible {
+    outline: 2px solid #24388d;
+  }
+}
+
+.security-checkbox {
+  --label-height: 1.5rem;
+
+  position: relative;
+  display: flex;
+
+  input {
+    appearance: none;
+  }
+  input:hover {
+    cursor: pointer;
+  }
+
+  label {
+    display: block;
+    height: var(--label-height);
+    block-size: var(--label-height);
+    line-height: var(--label-height);
+  }
+  input::after {
+    width: fit-content;
+    content: "OFF";
+    font-size: 1rem;
+    color: #dadada;
+  }
+  input:checked {
+    &::after {
+      content: "ON";
+      color: #03cf5d;
+    }
+  }
+  input:focus {
+    outline: none;
+  }
+  input:focus-visible {
+    outline: 2px solid #24388d;
+  }
+}
+
+@media (max-width: 768px) {
+  .security-checkbox {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .login-form {
+    width: 500px;
+  }
+
+  .login-setting-group {
+    justify-content: space-between;
+  }
+}
