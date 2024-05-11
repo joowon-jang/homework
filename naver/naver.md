@@ -60,7 +60,8 @@
 
 ### 손으로 그려본 마크업 구조
 
-<img src="./img-md/naver_login_form-markup.jpeg" alt="손 마크업" />
+<img src="./img-md/naver_login_form-markup.jpeg" alt="손 마크업" width="400px" />
+
 (처음 그렸던 마크업 구조와 많이 달라져서 다시 그림...)
 
 ### 구조 설계 및 접근성 고려
