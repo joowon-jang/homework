@@ -1,5 +1,6 @@
 @import url(/naver/base.css);
 
+/* ID/PWD input 컴포넌트 */
 .login-input-group {
   --input-gap: 0.625rem;
 
@@ -10,10 +11,6 @@
   .form-input {
     --font-size: 0.875rem;
     --input-height: 2.8125rem;
-    --border-color: #dadada;
-    --border-color-focused: #03cf5d;
-    --bg-color: #fff;
-    --bg-color-focused: #e9f0fd;
 
     display: flex;
     flex-flow: row wrap;
@@ -28,11 +25,6 @@
 
       border: 1px solid var(--border-color);
       background: var(--bg-color);
-    }
-    input:focus {
-      border-color: var(--border-color-focused);
-      background: var(--bg-color-focused);
-      outline: none;
     }
   }
 }

@@ -1,0 +1,13 @@
+@import url(/naver/base.css);
+
+/* 버튼 컴포넌트 */
+.button {
+  --button-height: 2.8125rem;
+
+  font-size: 1rem;
+  height: var(--button-height);
+  block-size: var(--button-height);
+  line-height: var(--button-height);
+  border: none;
+  cursor: pointer;
+}
