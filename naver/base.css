@@ -52,4 +52,6 @@ fieldset {
 input,
 button {
   font: inherit;
+  margin: 0;
+  padding: 0;
 }

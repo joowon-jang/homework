@@ -11,12 +11,14 @@
 
     <section class="login-section">
       <!-- 네이버 로고 -->
-      <a href="/" aria-label="홈으로 이동">
-        <picture>
-          <source srcset="./logo.svg" width="230px" />
-          <img src="./logo.png" alt="네이버 로고" width="230px" />
-        </picture>
-      </a>
+      <h1>
+        <a href="/">
+          <picture>
+            <source srcset="./logo.svg" width="230px" />
+            <img src="./logo.png" alt="네이버" width="230px" />
+          </picture>
+        </a>
+      </h1>
 
       <!-- 로그인 폼 -->
       <form action="/" class="login-form">
@@ -54,15 +56,19 @@
               <label for="keepLogin">로그인 상태 유지</label>
             </div>
             <div role="group" class="form-checkbox ip-security-checkbox">
-              <label for="ipSecurity">
-                <a href="/naver/ip_security.html">IP 보안</a>
-              </label>
+              <a
+                href="/naver/ip_security.html"
+                target="_blank"
+                rel="noreferrer noopener"
+                >IP 보안</a
+              >
+              <label for="ipSecurity" class="sr-only">IP 보안</label>
               <input type="checkbox" id="ipSecurity" name="ipSecurity" />
             </div>
           </div>
 
           <!-- 로그인 버튼 -->
-          <button type="submit">로그인</button>
+          <button type="submit" class="button login-button">로그인</button>
         </fieldset>
       </form>
     </section>
