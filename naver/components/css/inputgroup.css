@@ -1,7 +1,7 @@
 @import url(/naver/base.css);
 
 /* ID/PWD input 컴포넌트 */
-.login-input-group {
+.input-group {
   --input-gap: 0.625rem;
 
   display: flex;
