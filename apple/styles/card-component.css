@@ -1,0 +1,62 @@
+@import url(base.css);
+@import url(reset.css);
+@import url(theme.css);
+
+.card {
+  height: var(--size);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding-top: var(--large-spacing);
+  gap: var(--small-spacing);
+  background-image: image-set(
+    url(../products/ipad_pro.jpeg) 1x,
+    url(../products/ipad_pro_2x.jpeg) 2x
+  );
+  background-size: cover;
+  background-position: 50% 50%;
+
+  .card-title {
+    font-size: var(--large-text);
+    font-weight: 700;
+  }
+  .card-subtitle {
+    font-size: var(--base-text);
+    line-height: var(--line-normal);
+    text-align: center;
+  }
+
+  .card-additional-text {
+    font-size: var(--small-text);
+    color: var(--gray);
+  }
+
+  .button-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: var(--base-spacing);
+
+    .button {
+      padding: var(--x-small-spacing) var(--small-spacing);
+      font-size: var(--xx-small-text);
+      border-radius: 20px;
+      border: 1px solid var(--black);
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    padding-top: var(--extra-large-spacing);
+
+    .card-title {
+      font-size: var(--extra-large-text);
+    }
+    .card-subtitle {
+      font-size: var(--medium-text);
+    }
+    .button {
+      font-size: var(--x-small-text);
+    }
+  }
+}
