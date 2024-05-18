@@ -92,6 +92,37 @@
 
 ## etc
 
+### 질문
+
+- 아래의 css코드에서 &:hover 부분이 &.button-left와 &.button-right 보다 위쪽에 위치하면 &:hover의 스타일이 적용이 안됩니다. button-left와 button-right의 hover에 대한 스타일은 지정한 적이 없는데 왜 안되는 건가요?
+
+  ```css
+  /* button-blue */
+  .button-blue {
+    /* blue + left */
+    &.button-left {
+      color: var(--white);
+      background-color: var(--button-blue);
+      border-color: var(--button-blue);
+    }
+    /* blue + right */
+    &.button-right {
+      color: var(--button-blue);
+      background-color: transparent;
+      border-color: var(--button-blue);
+    }
+
+    /* blue hovered */
+    &:hover {
+      background-color: var(--button-blue-hover);
+      border-color: var(--button-blue-hover);
+      color: var(--white);
+    }
+  }
+  ```
+
+  한시간동안 찾아봐도 모르겠습니다ㅠㅠ
+
 ### 이번 과제에서 알게 된 사실 + 느낀점 !
 
 - 한 클래스에서 정의한 변수는 해당 클래스가 적용된 요소와 그 요소의 자식 요소, 그리고 (해당 클래스가 적용된 요소의) 다른 클래스에서도 사용할 수 있다.<br/>
@@ -101,7 +132,7 @@
   <a class=".button .button-black .button-left"></a>
   ```
 
-  다른 css파일에서 .button의 style을 import해도 .button-black, .button-left에서 .button의 변수를 사용할 수 있기 때문에 컴포넌트 분리의 개념이 더 확실하게 다가왔다.
+  > 다른 css파일에서 .button의 style을 import해도 .button-black, .button-left에서 .button의 변수를 사용할 수 있기 때문에 컴포넌트 분리의 개념이 더 확실하게 다가왔다.
 
 - 접근성 측면에서 `<button>`요소와 `<a>`요소를 고민하면서 **"별 차이 없는 같은데?"**라고 생각했었지만, 브라우저에서 직접 나타나는 차이점(우클릭)을 봤을 때, 장애를 가진 사용자 외에도 사용할 때에 **"이렇게 직접적이고 직관적인 차이가 있었구나.."** 하면서 깨달음(?)이 있었다.
   > 접근성을 고려하지 않는 것은 **틀린 것이 아니라 아쉬운 부분**이기 때문에 정답을 찾을 수도 없고 계속 고민이 되어서, 이번 과제에서 **"어떻게 하면 접근성을 더 더 높일 수 있을까"** 고민하는 시간이 가장 즐거웠다!!!
