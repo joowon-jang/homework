@@ -35,13 +35,6 @@
 
 /* button-blue */
 .button-blue {
-  /* blue hovered */
-  &:hover {
-    background-color: var(--button-blue-hover);
-    border-color: var(--button-blue-hover);
-    color: var(--white);
-  }
-
   /* blue + left */
   &.button-left {
     color: var(--white);
@@ -54,16 +47,16 @@
     background-color: transparent;
     border-color: var(--button-blue);
   }
+
+  /* blue hovered */
+  &:hover {
+    color: var(--white);
+    background-color: var(--button-blue-hover);
+    border-color: var(--button-blue-hover);
+  }
 }
 /* button-black */
 .button-black {
-  /* black hovered */
-  &:hover {
-    background-color: var(--button-black-hover);
-    border-color: var(--button-black-hover);
-    color: var(--white);
-  }
-
   /* black + left */
   &.button-left {
     color: var(--white);
@@ -75,5 +68,12 @@
     color: var(--button-black);
     background-color: transparent;
     border-color: var(--button-black);
+  }
+
+  /* black hovered */
+  &:hover {
+    color: var(--white);
+    background-color: var(--button-black-hover);
+    border-color: var(--button-black-hover);
   }
 }
