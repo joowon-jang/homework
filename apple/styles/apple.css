@@ -8,20 +8,6 @@
   grid-auto-rows: auto;
 }
 
-/* 미디어 width 1024이상 */
-@media (min-width: 1024px) {
-  .card {
-    padding-top: var(--extra-large-spacing);
-
-    .card-title {
-      font-size: var(--extra-large-text);
-    }
-    .card-subtitle {
-      font-size: var(--medium-text);
-    }
-  }
-}
-
 .card-1 {
   background-image: image-set(
     url(../products/ipad_pro.jpeg) 1x,
