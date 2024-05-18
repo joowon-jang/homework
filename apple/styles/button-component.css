@@ -2,6 +2,10 @@
 @import url(reset.css);
 @import url(theme.css);
 
+body {
+  margin: 50px;
+}
+
 .button {
   /* blue button props */
   --button-blue: var(--blue-300);
@@ -19,6 +23,7 @@
   /* color는 임시 (컴포넌트 사용할 때 props로 재정의함) */
   background-color: var(--button-black);
   border: 1px solid var(--border-black);
+  color: var(--white);
   cursor: pointer;
 }
 
