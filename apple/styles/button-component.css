@@ -29,3 +29,51 @@
     font-size: var(--x-small-text);
   }
 }
+
+/* 아래는 버튼 컴포넌트의 4가지 타입 */
+/* 리액트로 구현한다면 type, color라는 prop을 통해 선택 */
+
+/* button-blue */
+.button-blue {
+  /* blue hovered */
+  &:hover {
+    background-color: var(--button-blue-hover);
+    border-color: var(--button-blue-hover);
+    color: var(--white);
+  }
+
+  /* blue + left */
+  &.button-left {
+    color: var(--white);
+    background-color: var(--button-blue);
+    border-color: var(--button-blue);
+  }
+  /* blue + right */
+  &.button-right {
+    color: var(--button-blue);
+    background-color: transparent;
+    border-color: var(--button-blue);
+  }
+}
+/* button-black */
+.button-black {
+  /* black hovered */
+  &:hover {
+    background-color: var(--button-black-hover);
+    border-color: var(--button-black-hover);
+    color: var(--white);
+  }
+
+  /* black + left */
+  &.button-left {
+    color: var(--white);
+    background-color: var(--button-black);
+    border-color: var(--button-black);
+  }
+  /* black + right */
+  &.button-right {
+    color: var(--button-black);
+    background-color: transparent;
+    border-color: var(--button-black);
+  }
+}

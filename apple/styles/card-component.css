@@ -59,42 +59,8 @@
 /* 검은 배경 카드 */
 .card-black {
   color: var(--white);
-
-  /* button-blue */
-  .button-left {
-    color: var(--white);
-    background-color: var(--button-blue);
-    border-color: var(--button-blue);
-  }
-  .button-right {
-    color: var(--button-blue);
-    background-color: transparent;
-    border-color: var(--button-blue);
-  }
-  .button:hover {
-    background-color: var(--button-blue-hover);
-    border-color: var(--button-blue-hover);
-    color: var(--white);
-  }
 }
 /* 흰 배경 카드 */
 .card-white {
   color: var(--black);
-
-  /* button-black */
-  .button-left {
-    color: var(--white);
-    background-color: var(--button-black);
-    border-color: var(--button-black);
-  }
-  .button-right {
-    color: var(--button-black);
-    background-color: transparent;
-    border-color: var(--button-black);
-  }
-  .button:hover {
-    background-color: var(--button-black-hover);
-    border-color: var(--button-black-hover);
-    color: var(--white);
-  }
 }
