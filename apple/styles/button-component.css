@@ -2,10 +2,6 @@
 @import url(reset.css);
 @import url(theme.css);
 
-body {
-  margin: 50px;
-}
-
 .button {
   /* blue button props */
   --button-blue: var(--blue-300);
