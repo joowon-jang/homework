@@ -1,0 +1,30 @@
+@import url(base.css);
+@import url(reset.css);
+@import url(theme.css);
+
+.button {
+  /* blue button props */
+  --button-blue: var(--blue-300);
+  --border-blue: var(--blue-300);
+  --button-blue-hover: var(--blue-200);
+
+  /* black button props */
+  --button-black: var(--black);
+  --border-black: var(--black);
+  --button-black-hover: var(--gray);
+
+  padding: var(--x-small-spacing) var(--small-spacing);
+  font-size: var(--xx-small-text);
+  border-radius: 20px;
+  /* color는 임시 (컴포넌트 사용할 때 props로 재정의함) */
+  background-color: var(--button-black);
+  border: 1px solid var(--border-black);
+  cursor: pointer;
+}
+
+/* 미디어 width 1024이상 */
+@media (min-width: 1024px) {
+  .button {
+    font-size: var(--x-small-text);
+  }
+}

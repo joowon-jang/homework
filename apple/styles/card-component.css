@@ -1,18 +1,19 @@
 @import url(base.css);
 @import url(reset.css);
 @import url(theme.css);
+@import url(button-component.css);
 
+/* 카드 컴포넌트 공통 스타일 */
 .card {
+  /* 스타일 확인을 위한 임시 배경색 */
+  background: purple;
+
   height: var(--size);
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   padding-top: var(--large-spacing);
   gap: var(--small-spacing);
-  background-image: image-set(
-    url(../products/ipad_pro.jpeg) 1x,
-    url(../products/ipad_pro_2x.jpeg) 2x
-  );
   background-size: cover;
   background-position: 50% 50%;
 
@@ -35,16 +36,10 @@
     display: flex;
     flex-flow: row nowrap;
     gap: var(--base-spacing);
-
-    .button {
-      padding: var(--x-small-spacing) var(--small-spacing);
-      font-size: var(--xx-small-text);
-      border-radius: 20px;
-      border: 1px solid var(--black);
-    }
   }
 }
 
+/* 미디어 width 1024이상 */
 @media (min-width: 1024px) {
   .card {
     padding-top: var(--extra-large-spacing);
@@ -55,8 +50,51 @@
     .card-subtitle {
       font-size: var(--medium-text);
     }
-    .button {
-      font-size: var(--x-small-text);
-    }
+  }
+}
+
+/* 아래는 카드 컴포넌트의 두가지 타입 */
+/* 리액트로 구현한다면 type이라는 prop을 통해 둘 중에서 선택 */
+
+/* 검은 배경 카드 */
+.card-black {
+  color: var(--white);
+
+  /* button-blue */
+  .button-left {
+    color: var(--white);
+    background-color: var(--button-blue);
+    border-color: var(--button-blue);
+  }
+  .button-right {
+    color: var(--button-blue);
+    background-color: transparent;
+    border-color: var(--button-blue);
+  }
+  .button:hover {
+    background-color: var(--button-blue-hover);
+    border-color: var(--button-blue-hover);
+    color: var(--white);
+  }
+}
+/* 흰 배경 카드 */
+.card-white {
+  color: var(--black);
+
+  /* button-black */
+  .button-left {
+    color: var(--white);
+    background-color: var(--button-black);
+    border-color: var(--button-black);
+  }
+  .button-right {
+    color: var(--button-black);
+    background-color: transparent;
+    border-color: var(--button-black);
+  }
+  .button:hover {
+    background-color: var(--button-black-hover);
+    border-color: var(--button-black-hover);
+    color: var(--white);
   }
 }
