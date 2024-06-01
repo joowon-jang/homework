@@ -1,0 +1,45 @@
+body *,
+body *::before,
+body *::after {
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+  padding-inline-start: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: greenyellow;
+  width: 15rem;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.page-list-item {
+  font-size: 1.5rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  background-color: yellow;
+  padding: 1rem;
+  a {
+    color: darkgreen;
+    text-decoration: none;
+  }
+  a:hover {
+    color: blueviolet;
+  }
+}
