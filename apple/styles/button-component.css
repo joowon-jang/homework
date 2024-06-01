@@ -1,6 +1,6 @@
-@import url(base.css);
-@import url(reset.css);
-@import url(theme.css);
+@import url(./base.css);
+@import url(./reset.css);
+@import url(./theme.css);
 
 .button {
   /* blue button props */
